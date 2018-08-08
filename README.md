@@ -27,6 +27,15 @@ What is bad about this program?
 As we will see, all of these benefits of "enscapsulation" are benefits of OOP in general, 
 and more specifically, they are the main motivation for the things we call "design patterns".
 
+# Good Java Practices
+
+I have a put together a tutorial in multiple parts, where I try to introduce, bit by bit, some of
+what I consider to be good java practices, based on talking with real world software professionals.
+
+That series of tutorials is here:
+
+<https://ucsb-cs56-pconrad.github.io/tutorials/rational/>
+
 # Tangents
 
 * standard output vs. standard error---what are they, and why are they useful
