@@ -9,6 +9,9 @@ We showed a "bad" HS AP Java style program (your HS AP class was probably much b
 What is bad about this program?
 
 * No Encapsulation
+* Global Variables
+   * You can see them everywhere--it gets confusing.
+   
 
 # What is encapsulation
 
@@ -24,3 +27,34 @@ What is bad about this program?
 As we will see, all of these benefits of "enscapsulation" are benefits of OOP in general, 
 and more specifically, they are the main motivation for the things we call "design patterns".
 
+# Tangents
+
+* standard output vs. standard error---what are they, and why are they useful
+* how do you redirect? <https://stackoverflow.com/questions/7901517/how-to-redirect-stderr-and-stdout-to-different-files-in-the-same-line-of-bash>
+
+```
+[pconrad@csil-10 08.08]$ java HelloWorld 
+Hello World
+Hello Error Stream
+[pconrad@csil-10 08.08]$ java HelloWorld 1>>output
+Hello Error Stream
+[pconrad@csil-10 08.08]$ ls
+BadHSAPProgram.class  BadHSAPProgram.java~  HelloWorld.java   output
+BadHSAPProgram.java   HelloWorld.class      HelloWorld.java~
+[pconrad@csil-10 08.08]$ more output 
+Hello World
+[pconrad@csil-10 08.08]$ java HelloWorld 2>>error
+Hello World
+[pconrad@csil-10 08.08]$ more error 
+Hello Error Stream
+[pconrad@csil-10 08.08]$ 
+```
+
+```java
+public class HelloWorld {
+    public static void main(String [] args) {
+	System.out.println("Hello World");
+	System.err.println("Hello Error Stream");
+    }
+}
+```
